@@ -1,4 +1,4 @@
 export const environment = {
-  authUrl: 'http://localhost:8081',
-  apiUrl: 'http://localhost:8046',
+  authUrl: '/api/v1/auth',
+  apiUrl: '/api/v1/planner',
 };
