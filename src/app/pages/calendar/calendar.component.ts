@@ -1,13 +1,11 @@
 import {Component, ViewChild, AfterViewInit, EventEmitter, Output} from "@angular/core";
 import {DayPilot, DayPilotCalendarComponent, DayPilotNavigatorComponent} from "@daypilot/daypilot-lite-angular";
 import {DataService} from "./data.service";
-import Calendar = DayPilot.Calendar;
 import {MyCalendar} from "../../interfaces/Calendar";
 import {Subscription} from "rxjs";
 import {CalendarService} from "../../services/calendar.service";
 import {Event} from "../../interfaces/Event";
 import {CalendarDTO} from "../../interfaces/CalendarDTO";
-import {EventDTO} from "../../interfaces/EventDTO";
 import {EventService} from "../../services/event.service";
 
 @Component({
@@ -95,6 +93,7 @@ export class CalendarComponent implements AfterViewInit {
       title: res,
       listEvent: [],
     }
+    console.log(mewCalendar.id)
     this.calendarService.updateCalendar(mewCalendar).subscribe({
       next: data => {
         let calendar = {
@@ -275,6 +274,14 @@ export class CalendarComponent implements AfterViewInit {
   close(calendar: CalendarDTO[]){
     this.create=false;
     this.listCalendar = calendar;
+  }
+
+  deleteCalendar(a: CalendarDTO) {
+    this.calendarService.deleteCalendar(a.id).subscribe({
+      next: data => {
+        this.listCalendar = this.listCalendar.filter(x => x.id != a.id)
+      }
+  })
   }
 }
 

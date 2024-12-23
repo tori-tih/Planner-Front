@@ -14,7 +14,7 @@
               <input type="radio" id=a.id name="drone" (change)="handleChange(a)"value=a.id/>
               <label for=a.id>{{ a.title }} </label>
               <button class="e_d" (click)="editCalendar(a)">🖉</button>
-              <button class="e_d">✖</button>
+              <button class="e_d" (click)="deleteCalendar(a)">✖</button>
             </div>
           </div>
           <button class="add" (click)="addCalendar()">
