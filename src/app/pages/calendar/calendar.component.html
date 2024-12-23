@@ -1,0 +1,39 @@
+<div class="page" xmlns="http://www.w3.org/1999/html">
+  <div class="buttonsMenu">
+    <b >Календарь</b>
+    <a href="#" (click)="navigateNext($event)">Задачи</a>
+  </div>
+  <div class="wrap">
+    <div class="top">
+      <daypilot-navigator [config]="navigatorConfig" [(date)]="date" #navigator class="my"></daypilot-navigator>
+      <div class="edit">
+        <fieldset class="fieldset1">
+          <legend style="font-size: large; padding-bottom: 4px; color: #252525 ">Календари:</legend>
+          <div *ngFor="let a of listCalendar; index as i" >
+            <div >
+              <input type="radio" id=a.id name="drone" (change)="handleChange(a)"value=a.id/>
+              <label for=a.id>{{ a.title }} </label>
+              <button class="e_d" (click)="editCalendar(a)">🖉</button>
+              <button class="e_d">✖</button>
+            </div>
+          </div>
+          <button class="add" (click)="addCalendar()">
+            Добавить
+          </button>
+        </fieldset>
+
+      </div>
+    </div>
+    <div class="content">
+      <div class="buttons">
+        <a href="#" (click)="navigatePrevious($event)">&lsaquo;</a>
+        <daypilot-calendar [config]="config" [events]="events" #calendar
+                           (viewChange)="viewChange()"></daypilot-calendar>
+        <a href="#" (click)="navigateNext($event)">&rsaquo;</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div *ngIf="create"><app-modalc [calendar]="listCalendar" (closeEdit)="close($event)"/></div>
+

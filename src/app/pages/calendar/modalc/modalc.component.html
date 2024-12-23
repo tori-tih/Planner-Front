@@ -1,0 +1,27 @@
+
+<div class="backM" (click)="close()"></div>
+<div class="block">
+<!--  <div *ngIf=!noStore() class="createBlock">-->
+<!--    <select *ngIf="calendar" class="sel" [(ngModel)]="selectedCalendar" (ngModelChange)="emitSelected()">-->
+<!--      <option  *ngFor="let a of calendar" [value]="a.id">-->
+<!--        {{a.name}}-->
+<!--      </option>-->
+<!--    </select>-->
+<!--    <form [formGroup]="form2" *ngIf=selectCalendar class="createBlock">-->
+<!--      <input class="inp" formControlName="name" />-->
+<!--      <input class="inp" formControlName="editor"/>-->
+<!--    </form>-->
+<!--    <button class="baton" (click)="updateStore()">Сохранить изменения</button>-->
+<!--    <div style="text-align: center;" *ngIf="mesnotILUHI">ПОЖАЛУЙСТА! <br>{{mesILUHI}}</div>-->
+<!--    <button class="baton" (click)="addCalendar()">Сохранить</button>-->
+<!--  </div>-->
+  <div class="createBlock">
+    Добавить новый календарь:
+    <form [formGroup]="form" (submit)="confirm()" class="createBlock">
+      <input class="inp" formControlName="title" placeholder="Названеи" name="adr" />
+<!--      <input class="inp" formControlName="editor" placeholder="Редактор"/>-->
+    </form>
+    <button class="baton" (click)="addStore()">Сохранить</button>
+    <div style="text-align: center;" *ngIf="mesnotILUHI">ПОЖАЛУЙСТА! <br>{{mesnotILUHI}}</div>
+  </div>
+</div>

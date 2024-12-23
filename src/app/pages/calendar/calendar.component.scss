@@ -1,0 +1,113 @@
+.page{  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;}
+.wrap {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #47367c;
+  border-radius: 10px;
+  //margin-outside: abs(5);
+  margin:0 30%;
+  padding: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 10);
+  background-color: rgba(148, 127, 243, 0.54);
+}
+
+.fieldset1{
+  border: 1px solid #7848a5;
+  margin-top: -10px;
+  width: 200px;
+  height: 230px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+//.navigator_default_month {
+//  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+//  font-size: 40px;
+//}
+.top {
+  margin-top: 10px;
+  grid-gap: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  //flex-grow: 1;
+  //width: 80%;
+}
+
+.buttons {
+  display: flex;
+  margin-bottom: 10px;
+  grid-gap:20px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.buttonsMenu{
+  display: flex;
+  grid-gap:20px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.buttonsMenu a {
+  border: 5px solid #47367c;
+  border-bottom: none;
+  border-start-end-radius: 20px;
+  background-color: rgb(197, 186, 248);
+  color: #48387d;
+  font-size: xx-large;
+  cursor: pointer;
+  text-decoration: none;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.buttonsMenu b {
+  border: 5px solid #47367c;
+  border-bottom: none;
+  border-start-end-radius: 20px;
+  background-color: #48387d;
+  color: rgb(197, 186, 248);
+  font-size: xx-large;
+  cursor: pointer;
+  text-decoration: none;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.buttons a {
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(197, 186, 248);
+  color: #48387d;
+  font-size: xxx-large;
+  cursor: pointer;
+  //margin-right: 5px;
+  text-decoration: none;
+}
+.buttons a:hover {
+  color: rgba(148, 127, 243, 0.54);
+}
+
+.e_d{
+  background-color: transparent;
+  border: none;
+  &:hover{
+  color: #48387d;
+    text-shadow: 1px 1px 2px rgba(148, 127, 243, 0.54);
+}
+}
+
+.add{
+  margin-top: 10px; border-radius: 5px; border: 2px solid #47367c;
+  &:hover{
+    background-color: #48387d;
+    color: #dddddd;
+  }
+}

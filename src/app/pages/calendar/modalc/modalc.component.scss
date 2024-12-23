@@ -1,0 +1,31 @@
+.block{
+  right: 50%;
+  transform: translateX(50%);
+  top: 300px;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  width: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 150%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.backM{
+  margin-left: -8px;
+  background-color: #00000079;
+  /* z-index: 0; */
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+}
+.createBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: large;
+}
