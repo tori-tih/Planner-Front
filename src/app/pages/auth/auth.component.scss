@@ -1,5 +1,6 @@
 // login.component.scss
 .login-container {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,40 +8,50 @@
   background-color: #f5f5f5;
 
   .login-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
     width: 100%;
     max-width: 400px;
-
+    border: 5px solid #47367c;
+    border-radius: 10px;
+    //margin-outside: abs(5);
+    margin:0 30%;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 10);
+    background-color: rgba(148, 127, 243, 0.54);
     h2 {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
+      //margin-bottom: 2rem;
+      color: #47367c;
     }
   }
 
   .login-form {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
     .form-group {
       margin-bottom: 1.5rem;
 
       label {
         display: block;
         margin-bottom: 0.5rem;
-        color: #666;
+        color: #47367c;
       }
 
       input {
-        width: 100%;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+        width: 93%;
         padding: 0.75rem;
         border: 1px solid #ddd;
         border-radius: 4px;
         transition: border-color 0.2s;
+        background-color: #f5f1f6;
 
         &:focus {
           outline: none;
-          border-color: #007bff;
+          border-color: #48387d;
         }
 
         &.is-invalid {
@@ -62,22 +73,31 @@
     }
 
     button {
-      width: 100%;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin-left: 100px;
+      width: 50%;
       padding: 0.75rem;
-      background-color: #007bff;
-      color: white;
+      display: inline-block;
+      text-align: center;
+      background-color: rgb(197, 186, 248);
+      color: #48387d;
+      font-size: xx-large;
+      cursor: pointer;
+      //margin-right: 5px;
+      text-decoration: none;
       border: none;
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.2s;
-
+      border-radius: 5px; border: 2px solid #47367c;
       &:disabled {
-        background-color: #ccc;
+        background-color: #f5f1f6;
         cursor: not-allowed;
       }
 
-      &:hover:not(:disabled) {
-        background-color: #0056b3;
+      &:hover{
+        background-color: #48387d;
+        color: #dddddd;
       }
     }
   }
